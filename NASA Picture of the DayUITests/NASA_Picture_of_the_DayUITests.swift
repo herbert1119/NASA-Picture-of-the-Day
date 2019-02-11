@@ -11,24 +11,36 @@ import XCTest
 class NASA_Picture_of_the_DayUITests: XCTestCase {
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testNavigationBetweenViewControllers() {
+        var tapable = verifyShowingMainViewController()
+        tapable.tap()
+        tapable = verifyShowingHDImageViewController()
+        tapable.tap()
+        _ = verifyShowingMainViewController()
     }
-
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    private func verifyShowingMainViewController() -> XCUIElement {
+        let app = XCUIApplication()
+        let image = app.images["Image"]
+        let imageExists = image.waitForExistence(timeout: 60)
+        XCTAssert(imageExists)
+        
+        let label = app.staticTexts["Title"]
+        let labelExists = label.waitForExistence(timeout: 0.1)
+        XCTAssert(labelExists)
+        return image
+    }
+    
+    private func verifyShowingHDImageViewController() -> XCUIElement {
+        let app = XCUIApplication()
+        let hdImage = app.images["HDImage"]
+        let hdImageExists = hdImage.waitForExistence(timeout: 1)
+        XCTAssert(hdImageExists)
+        return hdImage
     }
 
 }

@@ -1,24 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="NASA_Picture_of_the_Day" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SVi-b6-AVS">
+                                <rect key="frame" x="16" y="177" width="343" height="333.5"/>
+                                <accessibility key="accessibilityConfiguration" label="Image"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Tl-A5-Pe8">
+                                <rect key="frame" x="16" y="526.5" width="343" height="0.0"/>
+                                <accessibility key="accessibilityConfiguration" label="Title"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="D6m-rq-tl0" userLabel="Loading View">
+                                <rect key="frame" x="177.5" y="333.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SVi-b6-AVS" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="7lc-cs-KV8"/>
+                            <constraint firstItem="1Tl-A5-Pe8" firstAttribute="top" secondItem="SVi-b6-AVS" secondAttribute="bottom" constant="16" id="GgA-pg-KCx"/>
+                            <constraint firstItem="D6m-rq-tl0" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ICA-rZ-OfZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Tl-A5-Pe8" secondAttribute="trailing" constant="16" id="Ix2-Vh-eKe"/>
+                            <constraint firstItem="SVi-b6-AVS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O5g-3i-Fbp"/>
+                            <constraint firstItem="D6m-rq-tl0" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UoE-Rc-VMR"/>
+                            <constraint firstItem="1Tl-A5-Pe8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rmk-Ia-jwo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SVi-b6-AVS" secondAttribute="trailing" constant="16" id="vt7-DA-E2F"/>
+                            <constraint firstItem="SVi-b6-AVS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="z6l-JZ-JSM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="SVi-b6-AVS" id="m4j-cr-i1I"/>
+                        <outlet property="loadingIndicator" destination="D6m-rq-tl0" id="t8H-vi-nMj"/>
+                        <outlet property="titleLabel" destination="1Tl-A5-Pe8" id="B4I-Gd-Bcr"/>
+                        <segue destination="d6L-EM-cv9" kind="presentation" identifier="PresentImage" id="5ww-F0-KrP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="56.799999999999997" y="26.53673163418291"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="LTu-ka-Pcp">
+            <objects>
+                <viewController id="d6L-EM-cv9" customClass="HDImageViewController" customModule="NASA_Picture_of_the_Day" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dsv-uP-Hvm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fga-1f-fbE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration" label="HDImage"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Fga-1f-fbE" firstAttribute="bottom" secondItem="3lV-xc-FiT" secondAttribute="bottom" id="7Dy-xT-4or"/>
+                            <constraint firstItem="Fga-1f-fbE" firstAttribute="trailing" secondItem="3lV-xc-FiT" secondAttribute="trailing" id="caJ-jE-O99"/>
+                            <constraint firstItem="Fga-1f-fbE" firstAttribute="leading" secondItem="3lV-xc-FiT" secondAttribute="leading" id="kUB-SP-KgN"/>
+                            <constraint firstItem="Fga-1f-fbE" firstAttribute="top" secondItem="3lV-xc-FiT" secondAttribute="top" id="u45-9y-han"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3lV-xc-FiT"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="Fga-1f-fbE" id="Wwz-wj-oSU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j8B-0Z-T1F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="26.53673163418291"/>
         </scene>
     </scenes>
 </document>

@@ -7,13 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C5A297D220FE5DD007FCE56 /* HDImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C5A297C220FE5DD007FCE56 /* HDImageViewController.swift */; };
 		0C90965E220F08520085B060 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90965D220F08520085B060 /* AppDelegate.swift */; };
-		0C909660220F08520085B060 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90965F220F08520085B060 /* ViewController.swift */; };
 		0C909663220F08520085B060 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C909661220F08520085B060 /* Main.storyboard */; };
 		0C909665220F08530085B060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C909664220F08530085B060 /* Assets.xcassets */; };
 		0C909668220F08530085B060 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C909666220F08530085B060 /* LaunchScreen.storyboard */; };
-		0C909673220F08530085B060 /* NASA_Picture_of_the_DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C909672220F08530085B060 /* NASA_Picture_of_the_DayTests.swift */; };
 		0C90967E220F08530085B060 /* NASA_Picture_of_the_DayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90967D220F08530085B060 /* NASA_Picture_of_the_DayUITests.swift */; };
+		0C90968C220F08900085B060 /* APODInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90968B220F08900085B060 /* APODInteractor.swift */; };
+		0C909690220F0E8D0085B060 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90968F220F0E8D0085B060 /* APOD.swift */; };
+		0C909693220F146A0085B060 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C909692220F146A0085B060 /* URLSessionMock.swift */; };
+		0C909694220F24C90085B060 /* APOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90968F220F0E8D0085B060 /* APOD.swift */; };
+		0C909695220F24C90085B060 /* APODInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90968B220F08900085B060 /* APODInteractor.swift */; };
+		0C909697220F24EC0085B060 /* APODInteractorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C909696220F24EC0085B060 /* APODInteractorTest.swift */; };
+		0C90969A220F28760085B060 /* APODFakeData in Resources */ = {isa = PBXBuildFile; fileRef = 0C909699220F28760085B060 /* APODFakeData */; };
+		0C90969C220FBF8C0085B060 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90969B220FBF8C0085B060 /* ImageDownloader.swift */; };
+		0C9096A0220FC3D90085B060 /* FakeImageData in Resources */ = {isa = PBXBuildFile; fileRef = 0C90969F220FC3D90085B060 /* FakeImageData */; };
+		0C9096A2220FC3FA0085B060 /* ImageDownloaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9096A1220FC3FA0085B060 /* ImageDownloaderTest.swift */; };
+		0C9096A3220FC4110085B060 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C90969B220FBF8C0085B060 /* ImageDownloader.swift */; };
+		0C9096A6220FCDEA0085B060 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9096A5220FCDEA0085B060 /* MainViewController.swift */; };
+		0C9096A9220FD6CA0085B060 /* FadeInOutTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C9096A8220FD6CA0085B060 /* FadeInOutTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,19 +46,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C5A297C220FE5DD007FCE56 /* HDImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HDImageViewController.swift; sourceTree = "<group>"; };
 		0C90965A220F08520085B060 /* NASA Picture of the Day.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NASA Picture of the Day.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C90965D220F08520085B060 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0C90965F220F08520085B060 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0C909662220F08520085B060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0C909664220F08530085B060 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C909667220F08530085B060 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C909669220F08530085B060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C90966E220F08530085B060 /* NASA Picture of the DayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA Picture of the DayTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C909672220F08530085B060 /* NASA_Picture_of_the_DayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_Picture_of_the_DayTests.swift; sourceTree = "<group>"; };
 		0C909674220F08530085B060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C909679220F08530085B060 /* NASA Picture of the DayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NASA Picture of the DayUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C90967D220F08530085B060 /* NASA_Picture_of_the_DayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASA_Picture_of_the_DayUITests.swift; sourceTree = "<group>"; };
 		0C90967F220F08530085B060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C90968B220F08900085B060 /* APODInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODInteractor.swift; sourceTree = "<group>"; };
+		0C90968F220F0E8D0085B060 /* APOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APOD.swift; sourceTree = "<group>"; };
+		0C909692220F146A0085B060 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		0C909696220F24EC0085B060 /* APODInteractorTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODInteractorTest.swift; sourceTree = "<group>"; };
+		0C909699220F28760085B060 /* APODFakeData */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = APODFakeData; sourceTree = "<group>"; };
+		0C90969B220FBF8C0085B060 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		0C90969F220FC3D90085B060 /* FakeImageData */ = {isa = PBXFileReference; lastKnownFileType = file; path = FakeImageData; sourceTree = "<group>"; };
+		0C9096A1220FC3FA0085B060 /* ImageDownloaderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloaderTest.swift; sourceTree = "<group>"; };
+		0C9096A5220FCDEA0085B060 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0C9096A8220FD6CA0085B060 /* FadeInOutTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeInOutTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +118,11 @@
 		0C90965C220F08520085B060 /* NASA Picture of the Day */ = {
 			isa = PBXGroup;
 			children = (
+				0C9096A7220FD6750085B060 /* Transition Animator */,
+				0C90968E220F0E730085B060 /* Modal */,
+				0C90968D220F08970085B060 /* Interactor */,
+				0C9096A4220FCDC70085B060 /* View Controller */,
 				0C90965D220F08520085B060 /* AppDelegate.swift */,
-				0C90965F220F08520085B060 /* ViewController.swift */,
 				0C909661220F08520085B060 /* Main.storyboard */,
 				0C909664220F08530085B060 /* Assets.xcassets */,
 				0C909666220F08530085B060 /* LaunchScreen.storyboard */,
@@ -110,7 +134,10 @@
 		0C909671220F08530085B060 /* NASA Picture of the DayTests */ = {
 			isa = PBXGroup;
 			children = (
-				0C909672220F08530085B060 /* NASA_Picture_of_the_DayTests.swift */,
+				0C909698220F283A0085B060 /* Fake Data */,
+				0C909691220F144C0085B060 /* Mock */,
+				0C909696220F24EC0085B060 /* APODInteractorTest.swift */,
+				0C9096A1220FC3FA0085B060 /* ImageDownloaderTest.swift */,
 				0C909674220F08530085B060 /* Info.plist */,
 			);
 			path = "NASA Picture of the DayTests";
@@ -123,6 +150,57 @@
 				0C90967F220F08530085B060 /* Info.plist */,
 			);
 			path = "NASA Picture of the DayUITests";
+			sourceTree = "<group>";
+		};
+		0C90968D220F08970085B060 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				0C90968B220F08900085B060 /* APODInteractor.swift */,
+				0C90969B220FBF8C0085B060 /* ImageDownloader.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		0C90968E220F0E730085B060 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				0C90968F220F0E8D0085B060 /* APOD.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		0C909691220F144C0085B060 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				0C909692220F146A0085B060 /* URLSessionMock.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		0C909698220F283A0085B060 /* Fake Data */ = {
+			isa = PBXGroup;
+			children = (
+				0C909699220F28760085B060 /* APODFakeData */,
+				0C90969F220FC3D90085B060 /* FakeImageData */,
+			);
+			path = "Fake Data";
+			sourceTree = "<group>";
+		};
+		0C9096A4220FCDC70085B060 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0C9096A5220FCDEA0085B060 /* MainViewController.swift */,
+				0C5A297C220FE5DD007FCE56 /* HDImageViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		0C9096A7220FD6750085B060 /* Transition Animator */ = {
+			isa = PBXGroup;
+			children = (
+				0C9096A8220FD6CA0085B060 /* FadeInOutTransition.swift */,
+			);
+			path = "Transition Animator";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +317,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C90969A220F28760085B060 /* APODFakeData in Resources */,
+				0C9096A0220FC3D90085B060 /* FakeImageData in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +336,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C909660220F08520085B060 /* ViewController.swift in Sources */,
+				0C90969C220FBF8C0085B060 /* ImageDownloader.swift in Sources */,
+				0C909690220F0E8D0085B060 /* APOD.swift in Sources */,
+				0C9096A6220FCDEA0085B060 /* MainViewController.swift in Sources */,
+				0C90968C220F08900085B060 /* APODInteractor.swift in Sources */,
+				0C5A297D220FE5DD007FCE56 /* HDImageViewController.swift in Sources */,
+				0C9096A9220FD6CA0085B060 /* FadeInOutTransition.swift in Sources */,
 				0C90965E220F08520085B060 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,7 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C909673220F08530085B060 /* NASA_Picture_of_the_DayTests.swift in Sources */,
+				0C909693220F146A0085B060 /* URLSessionMock.swift in Sources */,
+				0C9096A2220FC3FA0085B060 /* ImageDownloaderTest.swift in Sources */,
+				0C909694220F24C90085B060 /* APOD.swift in Sources */,
+				0C909697220F24EC0085B060 /* APODInteractorTest.swift in Sources */,
+				0C9096A3220FC4110085B060 /* ImageDownloader.swift in Sources */,
+				0C909695220F24C90085B060 /* APODInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
